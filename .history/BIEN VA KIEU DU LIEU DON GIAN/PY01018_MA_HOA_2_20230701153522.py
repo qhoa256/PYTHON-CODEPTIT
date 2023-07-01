@@ -1,0 +1,4 @@
+P = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ_.'
+
+while True:
+    
