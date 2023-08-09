@@ -15,7 +15,7 @@ def find_max_S(A, K):
 
 # Example usage
 A = [1, 2, 3, 4, 5]
-K = 1
+K = 2
 max_S = find_max_S(A, K)
 print(max_S)
 Trong ví dụ này, dãy số A là [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], và K = 2. Kết quả là 24, đạt được khi chọn các chỉ số i1 = 3, i2 = 6, i3 = 9, và tính giá trị S tương ứng.
