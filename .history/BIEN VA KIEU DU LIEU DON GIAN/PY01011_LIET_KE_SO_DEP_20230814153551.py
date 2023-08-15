@@ -2,7 +2,7 @@ def check(n):
     qhoa = str(n)
     qhoa1 = qhoa[:]
     qhoa2 = qhoa[: : -1]
-    # print(qhoa1, qhoa2)
+    print(qhoa1, qhoa2)
     cnt = 0
     a = [0, 2, 4, 6, 8]
     while n != 0:

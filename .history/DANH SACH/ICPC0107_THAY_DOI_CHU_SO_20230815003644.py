@@ -2,15 +2,15 @@ if __name__ == "__main__":
     t = int(input())
     while t > 0:
         t -= 1
-        p, q = input().split()
-        a = list(input().split())
+        p, q = map(int, input().split())
+        a = list(map(int, input().split()))
         if len(a) == 1:
             x1 = a[0]
-            x2 = input()
+            x2 = int(input())
         else:
             x1, x2 = a[0], a[1]
         y = max(p, q)
         x = min(p, q)
         small1, small2 = x1.replace(y, x), x2.replace(y, x)
-        big1, big2 = x1.replace(x, y), x2.replace(x, y)
+        big1, big2 = s1.replace(x, y), s2.replace(x, y)
         print(int(small1) + int(small2), int(big1) + int(big2))

@@ -2,7 +2,7 @@ def check(n):
     qhoa = str(n)
     qhoa1 = qhoa[:]
     qhoa2 = qhoa[: : -1]
-    # print(qhoa1, qhoa2)
+    print(qhoa1, qhoa2)
     cnt = 0
     a = [0, 2, 4, 6, 8]
     while n != 0:
@@ -11,7 +11,7 @@ def check(n):
         if tmp not in a:
             return False
         n //= 10
-    return cnt >= 2 and qhoa1 == qhoa2
+    return cnt % 2 == 1 and qhoa1 == qhoa2
 
 if __name__ == "__main__":
     t = int(input())

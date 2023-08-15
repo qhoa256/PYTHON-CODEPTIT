@@ -6,7 +6,7 @@ if __name__ == "__main__":
         a = list(input().split())
         if len(a) == 1:
             x1 = a[0]
-            x2 = input()
+            x2 = int(input())
         else:
             x1, x2 = a[0], a[1]
         y = max(p, q)

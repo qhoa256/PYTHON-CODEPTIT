@@ -2,11 +2,11 @@ if __name__ == "__main__":
     t = int(input())
     while t > 0:
         t -= 1
-        p, q = input().split()
-        a = list(input().split())
+        p, q = map(int, input().split())
+        a = list(map(int, input().split()))
         if len(a) == 1:
             x1 = a[0]
-            x2 = input()
+            x2 = int(input())
         else:
             x1, x2 = a[0], a[1]
         y = max(p, q)

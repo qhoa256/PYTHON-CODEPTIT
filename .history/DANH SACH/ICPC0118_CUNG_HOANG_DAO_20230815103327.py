@@ -1,0 +1,14 @@
+if __name__ == "__main__":
+    t = int(input())
+    while t > 0:
+        day, month = map(int, input().split())
+        if month == 1:
+            if day >= 1 and day <= 19:
+                print("Ma Ket")
+            else:
+                print("Bao Binh")
+        elif month == 2:
+            if day >= 1 and day <= 18:
+                print("Bao Binh")
+            else:
+                print("Song Ngu")
