@@ -8,7 +8,7 @@ if __name__ == "__main__":
             sum += int(x)
         tmp = str(sum)
         res = tmp[::-1]
-        if tmp == tmp[::-1]:
+        if tmp == tmp[::-1] and len(tmp) > 1:
             print('YES')
         else:
             print('NO')
