@@ -1,20 +1,26 @@
-def primeDigits(n):
-    return n == 2 or n == 3 or n == 5 or n == 7
+from math import *
 
-def res(n):
+prime = [True] * 1001
+
+def sieve():
+    prime[0], prime[1] = False, False
+    for i in range(isqrt(1001)):
+        if prime[i]:
+            for j in range(i * i, 1001, i):
+                prime[j] = False
+
+def check(n):
     for i in range(len(n)):
-        if primeDigits(int(n[i])):
-            if primeDigits(i) == False:
-                return False
-        if primeDigits(int(n[i])) == False:
-            if primeDigits(i):
-                return False
+        if prime[i] + prime[int(n[i])] == 1:
+            return False
     return True
+
 if __name__ == "__main__":
+    sieve()
     t = int(input())
     while t != 0:
         n = input()
-        if res(n):
+        if check(n):
             print('YES')
         else:
             print('NO')
