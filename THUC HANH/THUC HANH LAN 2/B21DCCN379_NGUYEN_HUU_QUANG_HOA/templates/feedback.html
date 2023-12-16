@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trang Feedback</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Trang Feedback</h1>
+
+        <form class="feedback-form" method="POST" action="{{ url_for('feedback') }}">
+            <label for="username">Tên người dùng:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback" required></textarea><br><br>
+            
+            <input type="submit" value="Gửi phản hồi">
+        </form>
+    </div>
+</body>
+</html>

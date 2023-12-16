@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phản hồi</title>
+</head>
+<body>
+    <h1>Phản hồi</h1>
+    <form method="POST">
+        <input type="hidden" name="username" value="{{ username }}">
+        <label for="feedback">Phản hồi:</label>
+        <textarea name="feedback" required></textarea><br>
+        <input type="submit" value="Gửi phản hồi">
+    </form>
+    <p>{{ get_flashed_messages() }}</p>
+</body>
+</html>

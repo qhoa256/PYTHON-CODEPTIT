@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Trang Đăng nhập</title>
+</head>
+
+<body>
+  <h1>Trang Đăng nhập</h1>
+  <form method="POST" action="{{ url_for('login') }}">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required placeholder="Nhập tên người dùng...">
+
+    <label for="password">Mật khẩu:</label>
+    <input type="password" id="password" name="password" required placeholder="Nhập mật khẩu...">
+
+    <input type="submit" value="Đăng nhập">
+  </form>
+  <p>Chưa có tài khoản? <a href="{{ url_for('register') }}">Đăng ký</a></p>
+</body>
+</html>

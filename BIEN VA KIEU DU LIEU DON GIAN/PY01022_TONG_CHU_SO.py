@@ -5,8 +5,11 @@ def trans(s):
     return str(n)
 if __name__ == "__main__":
     s = input()
-    cnt = 0
-    while len(s) > 1:
-        s = trans(s)
-        cnt += 1
-    print(cnt)
+    if len(s) == 1:
+        print(1)
+    else:
+        cnt = 0
+        while len(s) > 1:
+            s = trans(s)
+            cnt += 1
+        print(cnt)

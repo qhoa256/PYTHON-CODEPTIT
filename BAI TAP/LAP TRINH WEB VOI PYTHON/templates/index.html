@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="../static/css/reset.css">
+  <link rel="stylesheet" href="../static/css/base.css">
+  <link rel="stylesheet" href="../static/css/styles.css">
+
+  <title>HomePage</title>
+</head>
+
+<body>
+  <div class="container" style="position: fixed; top: 10px; right: 10px; z-index: 1000;">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    {% if category == 'success' %}
+    <div class='alert alert-success mb-3' role='alert'>
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true" class="close-button">&times;</span>
+      </button>
+    </div>
+    {% endif %}
+    {% if category == 'error' %}
+    <div class='alert alert-danger mb-3' role='alert'>
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true" class="close-button">&times;</span>
+      </button>
+    </div>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="inner-wrap">
+      <div class="inner-logo">
+        <a href="#">
+          <img src="../static/images/ptit_1.png" alt="Logo">
+          <span>PTIT</span>
+        </a>
+      </div>
+      <div class="inner-menu">
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Services</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="inner-social">
+        <ul>
+          <li>
+            <a href="/login" target="_self">
+              <i class="fa-solid fa-user"></i>
+              <span>Login</span>
+            </a>
+          </li>
+          <li>
+            <a href="/register" target="_self">
+              <i class="fa-solid fa-registered"></i>
+              <span>Register</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="inner-icon-mobi">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+  </header>
+  <!-- End  Header -->
+
+  <!-- Section-one -->
+  <div class="section-one">
+    <div class="container">
+      <div class="inner-wrap">
+        <div class="box-head">
+          <h2 class="inner-sub-title">
+            Ministry of Information and Communications
+          </h2>
+          <h1 class="inner-title">
+            PTIT
+          </h1>
+          <p class="inner-desc">
+            Welcome to Posts and Telecommunications Institute of Technology
+          </p>
+        </div>
+        <div class="inner-buttons">
+          <a href="#" class="button button-two">Our Services</a>
+          <a href="#" class="button button-two-outline">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Section-one -->
+
+  <script>
+    // Đặt thời gian tự động ẩn thông báo sau 2 giây
+    setTimeout(function () {
+      const alertContainers = document.querySelectorAll('.alert');
+      alertContainers.forEach(function (alertContainer) {
+        alertContainer.style.display = 'none';
+      });
+    }, 3000);
+  </script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+
+</body>
+
+</html>
