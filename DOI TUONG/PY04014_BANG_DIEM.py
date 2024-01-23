@@ -42,4 +42,3 @@ if __name__ == "__main__":
   a.sort(key = lambda x: -x.diemTB())
   for x in a:
     print(x)
-
